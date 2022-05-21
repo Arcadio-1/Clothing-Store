@@ -1,0 +1,49 @@
+@mixin navigation {
+  &-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    gap: 1rem;
+  }
+  &-item {
+    list-style: none;
+  }
+  &-link {
+    font-family: iranyekan-bold;
+    font-size: size(sm);
+    text-decoration: none;
+    color: color(primary);
+    &:hover {
+      color: lighten(color(primary), 40%);
+    }
+  }
+}
+
+@mixin responsive($breakPoint) {
+  @if ($breakPoint == xl) {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+  @if ($breakPoint == lg) {
+    @media (max-width: 1000px) {
+      @content;
+    }
+  }
+  @if ($breakPoint == md) {
+    @media (max-width: 760px) {
+      @content;
+    }
+  }
+  @if ($breakPoint == sm) {
+    @media (max-width: 560px) {
+      @content;
+    }
+  }
+  @if ($breakPoint == xs) {
+    @media (max-width: 400px) {
+      @content;
+    }
+  }
+}

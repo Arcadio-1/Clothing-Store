@@ -1,0 +1,190 @@
+@font-face {
+  font-family: iransans;
+  src: url(../font/iransans/ttf/IRANSansWeb.ttf); }
+
+@font-face {
+  font-family: iransans-num;
+  src: url(../font/iransans/ttf-num/IRANSansWebFaNum.ttf); }
+
+@font-face {
+  font-family: iransans-bold;
+  src: url(../font/iransans/ttf/IRANSansWeb_Bold.ttf); }
+
+@font-face {
+  font-family: iranyekan;
+  src: url(../font/iranyekan/IRANYekanWeb.ttf); }
+
+@font-face {
+  font-family: iranyekan-bold;
+  src: url(../font/iranyekan/IRANYekanWeb-Bold.ttf); }
+
+* {
+  font-family: iransans;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+  @media (max-width: 1000px) {
+    html {
+      font-size: 58.25%; } }
+  @media (max-width: 760px) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 560px) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 400px) {
+    html {
+      font-size: 45%; } }
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(6rem, 1fr);
+  grid-template-rows: repeat(4, min-content);
+  row-gap: 1.6rem;
+  background-color: #ffe; }
+
+.header {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  display: grid;
+  grid-template-columns: minmax(10rem, 1fr) repeat(7, minmax(min-content, 16rem)) minmax(10rem, 1fr);
+  grid-template-rows: repeat(3, min-content);
+  gap: 2rem; }
+
+.nav-first {
+  grid-column: 7/-1;
+  grid-row: 1/2;
+  margin-right: auto;
+  margin-left: 2rem; }
+  .nav-first-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    gap: 1rem; }
+  .nav-first-item {
+    list-style: none; }
+  .nav-first-link {
+    font-family: iranyekan-bold;
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #333; }
+    .nav-first-link:hover {
+      color: #999999; }
+  @media (max-width: 1000px) {
+    .nav-first {
+      grid-column: 6/-1; } }
+  @media (max-width: 760px) {
+    .nav-first {
+      grid-column: 5/-1; } }
+  @media (max-width: 560px) {
+    .nav-first {
+      grid-column: 4/-1; } }
+  @media (max-width: 400px) {
+    .nav-first {
+      grid-column: 2/-1; } }
+
+.nav-second {
+  grid-column: 4/7;
+  grid-row: 3/4; }
+  .nav-second-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    gap: 1rem; }
+  .nav-second-item {
+    list-style: none; }
+  .nav-second-link {
+    font-family: iranyekan-bold;
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #333; }
+    .nav-second-link:hover {
+      color: #999999; }
+  @media (max-width: 1000px) {
+    .nav-second {
+      grid-column: 3/8; } }
+  @media (max-width: 760px) {
+    .nav-second {
+      grid-column: 2/9; } }
+  @media (max-width: 560px) {
+    .nav-second {
+      grid-column: 1/-1; } }
+
+.logo {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  padding: 1rem; }
+  .logo img {
+    width: 100%;
+    max-width: 10rem; }
+
+.heading {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  text-align: center;
+  font-size: 3rem; }
+
+.dropdown-li {
+  position: relative; }
+  .dropdown-li::after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f078";
+    font-weight: bold; }
+  .dropdown-li:hover .dropdown {
+    visibility: visible;
+    opacity: 1; }
+
+.dropdown {
+  padding: 0.5rem 0.8rem;
+  background-color: #e6e2e4;
+  position: absolute;
+  top: 3rem;
+  right: 1.5rem;
+  width: 12rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: 5px; }
+  .dropdown-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    gap: 1rem; }
+  .dropdown-item {
+    list-style: none; }
+  .dropdown-link {
+    font-family: iranyekan-bold;
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #333; }
+    .dropdown-link:hover {
+      color: #999999; }
+  .dropdown::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -0.8rem;
+    right: 8rem;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #e6e2e4;
+    border-left: 15px solid transparent; }
+  .dropdown::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -0.8rem;
+    right: 0rem;
+    width: 12rem;
+    height: 1rem;
+    background-color: transparent; }
+  .dropdown-item {
+    margin-top: 0.3rem; }
+  .dropdown-link {
+    font-family: iranyekan;
+    font-size: 1.6rem; }

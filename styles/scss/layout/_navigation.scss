@@ -1,0 +1,33 @@
+.nav-first {
+  grid-column: 7/-1;
+  grid-row: 1/2;
+  margin-right: auto;
+  margin-left: 2rem;
+  @include navigation;
+  @include responsive(lg) {
+    grid-column: 6/-1;
+  }
+  @include responsive(md) {
+    grid-column: 5/-1;
+  }
+  @include responsive(sm) {
+    grid-column: 4/-1;
+  }
+  @include responsive(xs) {
+    grid-column: 2/-1;
+  }
+}
+.nav-second {
+  grid-column: 4/7;
+  grid-row: 3/4;
+  @include navigation;
+  @include responsive(lg) {
+    grid-column: 3/8;
+  }
+  @include responsive(md) {
+    grid-column: 2/9;
+  }
+  @include responsive(sm) {
+    grid-column: 1/-1;
+  }
+}

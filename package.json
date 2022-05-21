@@ -1,0 +1,23 @@
+{
+  "name": "clothing-store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-sass": "node-sass -o styles/css/ styles/scss/main.scss -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arcadio-1/Clothing-Store.git"
+  },
+  "author": "arcadio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arcadio-1/Clothing-Store/issues"
+  },
+  "homepage": "https://github.com/Arcadio-1/Clothing-Store#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
