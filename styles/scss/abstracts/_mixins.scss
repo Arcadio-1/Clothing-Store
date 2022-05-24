@@ -47,3 +47,29 @@
     }
   }
 }
+@mixin flexposition($jstfy: center, $alin: center) {
+  display: flex;
+  justify-content: $jstfy;
+  align-items: $alin;
+}
+
+@mixin footerNav {
+  &-heading {
+    color: color(primary);
+    font-size: size(sm);
+    margin-bottom: 0.5rem;
+  }
+  &-item {
+    list-style: none;
+    margin-top: 0.5rem;
+  }
+  &-link {
+    font-size: size(xs)-0.3;
+    color: color(primary);
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: lighten(color(primary), 40%);
+    }
+  }
+}

@@ -1,0 +1,80 @@
+.products {
+  grid-column: 1/-1;
+  grid-row: 3/4;
+  &-header {
+    text-align: center;
+    h2 {
+      font-size: size(lg);
+    }
+  }
+  &-wapper {
+    margin-top: 1.5rem;
+    @include flexposition;
+    .product {
+      position: relative;
+      &:hover .product-description {
+        visibility: visible;
+        opacity: 1;
+      }
+      &:hover .product-image {
+        opacity: 0.5;
+      }
+      &-image {
+        width: 100%;
+        transition: all 0.5s ease-in-out;
+      }
+      &-description {
+        transition: all 0.3s ease-in-out;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 10rem;
+        padding: 1.5rem;
+        background-color: rgba(color(secondary), 0.7);
+        border: 0.1rem solid color(primary);
+        border-radius: 0.5rem;
+        text-align: center;
+        visibility: hidden;
+        opacity: 0;
+        @include responsive(md) {
+          @include flexposition;
+        }
+        &-header {
+          font-size: size(xs-.6rem);
+          color: color(primary);
+          font-family: iransans;
+          @include responsive(md) {
+            display: none;
+          }
+        }
+        &-price {
+          font-size: size(xs-1);
+          margin: 1rem 0rem;
+          span {
+            font-family: iransans-num;
+            font-weight: 600;
+          }
+          @include responsive(md) {
+            display: none;
+          }
+        }
+        &-btn {
+          color: color(primary);
+          background-color: color(quaternary);
+          text-decoration: none;
+          padding: 0.2rem 1.5rem;
+          border: 0.1rem solid color(primary);
+          border-radius: 2.5px;
+          margin-top: 1rem;
+          @include responsive(md) {
+            font-size: size(xs-1);
+          }
+        }
+      }
+    }
+  }
+  &-footer {
+    @include flexposition;
+  }
+}

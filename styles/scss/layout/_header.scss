@@ -7,4 +7,5 @@
     minmax(10rem, 1fr);
   grid-template-rows: repeat(3, min-content);
   gap: 2rem;
+  z-index: 10;
 }
